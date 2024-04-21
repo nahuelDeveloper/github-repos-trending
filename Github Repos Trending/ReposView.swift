@@ -11,16 +11,17 @@ struct ReposView: View {
     @ObservedObject var reposViewModel: ReposViewModel
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        List {
+            ForEach(reposViewModel.repos) { repo in
+                Text(repo.name)
+            }
         }
-        .padding()
+        .onAppear {
+            reposViewModel.loadRepos()
+        }
     }
 }
 
 #Preview {
-    ReposView(reposViewModel: ReposViewModel())
+    ReposView(reposViewModel: ReposViewModel(reposService: MockReposService()))
 }

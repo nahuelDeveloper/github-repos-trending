@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Repo: Decodable {
+struct Repo: Decodable, Identifiable {
     let id: Int
     let name: String
     let full_name: String

@@ -16,7 +16,8 @@ struct Github_Repos_TrendingApp: App {
     }
     
     private func createReposView() -> some View {
-        let viewModel = ReposViewModel()
+        let service = MockReposService()
+        let viewModel = ReposViewModel(reposService: service)
         return ReposView(reposViewModel: viewModel)
     }
 }
