@@ -18,6 +18,7 @@ struct RepoRowView: View {
                 Spinner(isAnimating: true, style: .medium)
             }
             .frame(width: 60, height: 60)
+            .clipShape(Circle())
             VStack(alignment: .leading, spacing: 20) {
                 Text(repo.name)
                     .font(.headline)
