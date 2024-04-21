@@ -30,6 +30,8 @@
 		70F607E22BD53BBD003E1E68 /* ReposViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E12BD53BBD003E1E68 /* ReposViewModelTests.swift */; };
 		70F607E42BD53FEB003E1E68 /* RepoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E32BD53FEB003E1E68 /* RepoRowView.swift */; };
 		70F607E62BD54379003E1E68 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E52BD54379003E1E68 /* Spinner.swift */; };
+		70F607E82BD58EFD003E1E68 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E72BD58EFD003E1E68 /* ReposService.swift */; };
+		70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E92BD58F30003E1E68 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		70F607E12BD53BBD003E1E68 /* ReposViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModelTests.swift; sourceTree = "<group>"; };
 		70F607E32BD53FEB003E1E68 /* RepoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoRowView.swift; sourceTree = "<group>"; };
 		70F607E52BD54379003E1E68 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		70F607E72BD58EFD003E1E68 /* ReposService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposService.swift; sourceTree = "<group>"; };
+		70F607E92BD58F30003E1E68 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				70F607D32BD5344B003E1E68 /* mock-items.json */,
 				70F607D92BD534EF003E1E68 /* Extensions.swift */,
 				70F607E52BD54379003E1E68 /* Spinner.swift */,
+				70F607E92BD58F30003E1E68 /* NetworkManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				70F607CC2BD53372003E1E68 /* ReposServicing.swift */,
+				70F607E72BD58EFD003E1E68 /* ReposService.swift */,
 				70F607D62BD534D0003E1E68 /* MockReposService.swift */,
 			);
 			path = Service;
@@ -317,12 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */,
 				70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */,
 				70F607DD2BD53745003E1E68 /* Owner.swift in Sources */,
 				70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */,
 				70F607D02BD533BE003E1E68 /* Repo.swift in Sources */,
 				70F607D72BD534D0003E1E68 /* MockReposService.swift in Sources */,
 				70F607E42BD53FEB003E1E68 /* RepoRowView.swift in Sources */,
+				70F607E82BD58EFD003E1E68 /* ReposService.swift in Sources */,
 				70F607CD2BD53372003E1E68 /* ReposServicing.swift in Sources */,
 				70F607CA2BD532AB003E1E68 /* ReposViewModel.swift in Sources */,
 				70F607DA2BD534EF003E1E68 /* Extensions.swift in Sources */,

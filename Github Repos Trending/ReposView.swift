@@ -12,16 +12,30 @@ struct ReposView: View {
     
     var body: some View {
         NavigationStack {
+            content
+                .navigationTitle("Trending")
+                .navigationBarTitleDisplayMode(.inline)
+                .onAppear {
+                    reposViewModel.loadRepos()
+                }
+        }
+    }
+    
+    private var content: some View {
+        switch reposViewModel.state {
+        case .idle:
+            Color.clear.eraseToAnyView()
+        case .loading:
+            Spinner(isAnimating: true, style: .large).eraseToAnyView()
+        case .loaded:
             List {
                 ForEach(reposViewModel.repos) { repo in
                     RepoRowView(repo: repo)
                 }
-            }
-            .onAppear {
-                reposViewModel.loadRepos()
-            }
-            .navigationTitle("Trending")
-            .navigationBarTitleDisplayMode(.inline)
+            }.eraseToAnyView()
+        case .failed:
+            // TODO: Add Lottie retry view
+            Text("Error fetching trending repos").eraseToAnyView()
         }
     }
 }

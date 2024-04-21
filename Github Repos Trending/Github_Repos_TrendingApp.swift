@@ -16,7 +16,8 @@ struct Github_Repos_TrendingApp: App {
     }
     
     private func createReposView() -> some View {
-        let service = MockReposService()
+        let service: ReposServicing = NetworkManager.apiEnvironment == .prod ?
+            ReposService() : MockReposService()
         let viewModel = ReposViewModel(reposService: service)
         return ReposView(reposViewModel: viewModel)
     }
