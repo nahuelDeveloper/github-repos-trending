@@ -11,7 +11,12 @@ import SwiftUI
 struct Github_Repos_TrendingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            createReposView()
         }
+    }
+    
+    private func createReposView() -> some View {
+        let viewModel = ReposViewModel()
+        return ReposView(reposViewModel: viewModel)
     }
 }

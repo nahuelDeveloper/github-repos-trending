@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */; };
-		70F607A22BD5310C003E1E68 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607A12BD5310C003E1E68 /* ContentView.swift */; };
+		70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607A12BD5310C003E1E68 /* ReposView.swift */; };
 		70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F607A32BD5310D003E1E68 /* Assets.xcassets */; };
 		70F607A72BD5310D003E1E68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F607A62BD5310D003E1E68 /* Preview Assets.xcassets */; };
 		70F607B12BD5310D003E1E68 /* Github_Repos_TrendingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607B02BD5310D003E1E68 /* Github_Repos_TrendingTests.swift */; };
 		70F607BB2BD5310D003E1E68 /* Github_Repos_TrendingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607BA2BD5310D003E1E68 /* Github_Repos_TrendingUITests.swift */; };
 		70F607BD2BD5310D003E1E68 /* Github_Repos_TrendingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607BC2BD5310D003E1E68 /* Github_Repos_TrendingUITestsLaunchTests.swift */; };
+		70F607CA2BD532AB003E1E68 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607C92BD532AB003E1E68 /* ReposViewModel.swift */; };
+		70F607CB2BD532AB003E1E68 /* ReposViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607C92BD532AB003E1E68 /* ReposViewModel.swift */; };
+		70F607CD2BD53372003E1E68 /* ReposServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607CC2BD53372003E1E68 /* ReposServicing.swift */; };
+		70F607CE2BD53372003E1E68 /* ReposServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607CC2BD53372003E1E68 /* ReposServicing.swift */; };
+		70F607D02BD533BE003E1E68 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607CF2BD533BE003E1E68 /* Repo.swift */; };
+		70F607D12BD533BE003E1E68 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607CF2BD533BE003E1E68 /* Repo.swift */; };
+		70F607D42BD5344B003E1E68 /* mock-items.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F607D32BD5344B003E1E68 /* mock-items.json */; };
+		70F607D52BD5344B003E1E68 /* mock-items.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F607D32BD5344B003E1E68 /* mock-items.json */; };
+		70F607D72BD534D0003E1E68 /* MockReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607D62BD534D0003E1E68 /* MockReposService.swift */; };
+		70F607D82BD534D0003E1E68 /* MockReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607D62BD534D0003E1E68 /* MockReposService.swift */; };
+		70F607DA2BD534EF003E1E68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607D92BD534EF003E1E68 /* Extensions.swift */; };
+		70F607DB2BD534EF003E1E68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607D92BD534EF003E1E68 /* Extensions.swift */; };
+		70F607DD2BD53745003E1E68 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607DC2BD53745003E1E68 /* Owner.swift */; };
+		70F607DE2BD53745003E1E68 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607DC2BD53745003E1E68 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +50,7 @@
 /* Begin PBXFileReference section */
 		70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Repos Trending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingApp.swift; sourceTree = "<group>"; };
-		70F607A12BD5310C003E1E68 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		70F607A12BD5310C003E1E68 /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
 		70F607A32BD5310D003E1E68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70F607A62BD5310D003E1E68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		70F607AC2BD5310D003E1E68 /* Github Repos TrendingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github Repos TrendingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +58,13 @@
 		70F607B62BD5310D003E1E68 /* Github Repos TrendingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github Repos TrendingUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F607BA2BD5310D003E1E68 /* Github_Repos_TrendingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingUITests.swift; sourceTree = "<group>"; };
 		70F607BC2BD5310D003E1E68 /* Github_Repos_TrendingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		70F607C92BD532AB003E1E68 /* ReposViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewModel.swift; sourceTree = "<group>"; };
+		70F607CC2BD53372003E1E68 /* ReposServicing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposServicing.swift; sourceTree = "<group>"; };
+		70F607CF2BD533BE003E1E68 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		70F607D32BD5344B003E1E68 /* mock-items.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mock-items.json"; sourceTree = "<group>"; };
+		70F607D62BD534D0003E1E68 /* MockReposService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReposService.swift; sourceTree = "<group>"; };
+		70F607D92BD534EF003E1E68 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		70F607DC2BD53745003E1E68 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +116,11 @@
 			isa = PBXGroup;
 			children = (
 				70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */,
-				70F607A12BD5310C003E1E68 /* ContentView.swift */,
+				70F607A12BD5310C003E1E68 /* ReposView.swift */,
+				70F607C92BD532AB003E1E68 /* ReposViewModel.swift */,
+				70F607E02BD537C1003E1E68 /* Service */,
+				70F607DF2BD5374D003E1E68 /* Model */,
+				70F607D22BD53415003E1E68 /* Utils */,
 				70F607A32BD5310D003E1E68 /* Assets.xcassets */,
 				70F607A52BD5310D003E1E68 /* Preview Content */,
 			);
@@ -125,6 +150,33 @@
 				70F607BC2BD5310D003E1E68 /* Github_Repos_TrendingUITestsLaunchTests.swift */,
 			);
 			path = "Github Repos TrendingUITests";
+			sourceTree = "<group>";
+		};
+		70F607D22BD53415003E1E68 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				70F607D32BD5344B003E1E68 /* mock-items.json */,
+				70F607D92BD534EF003E1E68 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		70F607DF2BD5374D003E1E68 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70F607CF2BD533BE003E1E68 /* Repo.swift */,
+				70F607DC2BD53745003E1E68 /* Owner.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70F607E02BD537C1003E1E68 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				70F607CC2BD53372003E1E68 /* ReposServicing.swift */,
+				70F607D62BD534D0003E1E68 /* MockReposService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F607A72BD5310D003E1E68 /* Preview Assets.xcassets in Resources */,
+				70F607D42BD5344B003E1E68 /* mock-items.json in Resources */,
 				70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F607D52BD5344B003E1E68 /* mock-items.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70F607A22BD5310C003E1E68 /* ContentView.swift in Sources */,
+				70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */,
+				70F607DD2BD53745003E1E68 /* Owner.swift in Sources */,
 				70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */,
+				70F607D02BD533BE003E1E68 /* Repo.swift in Sources */,
+				70F607D72BD534D0003E1E68 /* MockReposService.swift in Sources */,
+				70F607CD2BD53372003E1E68 /* ReposServicing.swift in Sources */,
+				70F607CA2BD532AB003E1E68 /* ReposViewModel.swift in Sources */,
+				70F607DA2BD534EF003E1E68 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +326,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F607CB2BD532AB003E1E68 /* ReposViewModel.swift in Sources */,
+				70F607DB2BD534EF003E1E68 /* Extensions.swift in Sources */,
+				70F607DE2BD53745003E1E68 /* Owner.swift in Sources */,
 				70F607B12BD5310D003E1E68 /* Github_Repos_TrendingTests.swift in Sources */,
+				70F607CE2BD53372003E1E68 /* ReposServicing.swift in Sources */,
+				70F607D12BD533BE003E1E68 /* Repo.swift in Sources */,
+				70F607D82BD534D0003E1E68 /* MockReposService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

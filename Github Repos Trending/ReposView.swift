@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ReposView.swift
 //  Github Repos Trending
 //
 //  Created by Nahuel Jose Roldan on 21/04/2024.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ReposView: View {
+    @ObservedObject var reposViewModel: ReposViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +22,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ReposView(reposViewModel: ReposViewModel())
 }
