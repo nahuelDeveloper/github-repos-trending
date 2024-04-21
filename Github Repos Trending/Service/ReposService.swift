@@ -10,7 +10,7 @@ import Combine
 
 class ReposService: ReposServicing {
     func fetchRepos() -> AnyPublisher<[Repo], Error> {
-        let url = URL(string: "https://api.githubBBB.com/search/repositories?q=language=+sort:stars")!
+        let url = URL(string: "https://api.github.com/search/repositories?q=language=+sort:stars")!
         return NetworkManager.fetchURL(url)
     }
 }
