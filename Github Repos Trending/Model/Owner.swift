@@ -9,4 +9,8 @@ import Foundation
 
 struct Owner: Decodable {
     let avatar_url: String
+    
+    var imageURL: URL {
+        URL(string: avatar_url)!
+    }
 }

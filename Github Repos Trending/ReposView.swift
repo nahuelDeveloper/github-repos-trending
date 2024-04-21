@@ -11,13 +11,17 @@ struct ReposView: View {
     @ObservedObject var reposViewModel: ReposViewModel
     
     var body: some View {
-        List {
-            ForEach(reposViewModel.repos) { repo in
-                Text(repo.name)
+        NavigationStack {
+            List {
+                ForEach(reposViewModel.repos) { repo in
+                    RepoRowView(repo: repo)
+                }
             }
-        }
-        .onAppear {
-            reposViewModel.loadRepos()
+            .onAppear {
+                reposViewModel.loadRepos()
+            }
+            .navigationTitle("Trending")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

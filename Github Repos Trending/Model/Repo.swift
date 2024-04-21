@@ -12,4 +12,8 @@ struct Repo: Decodable, Identifiable {
     let name: String
     let full_name: String
     let owner: Owner
+    
+    var avatarURL: URL {
+        owner.imageURL
+    }
 }
