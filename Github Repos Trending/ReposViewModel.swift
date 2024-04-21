@@ -10,7 +10,7 @@ import Combine
 
 class ReposViewModel: ObservableObject {
     let reposService: ReposServicing
-    @Published private(set) var state = State.idle
+    @Published private(set) var state = ReposViewState.idle
     @Published private(set) var repos = [Repo]()
     var cancellables = [AnyCancellable]()
     
@@ -27,14 +27,16 @@ class ReposViewModel: ObservableObject {
                     self.state = .failed
                 }
             } receiveValue: { repos in
-                self.repos = repos
-                self.state = .loaded
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+                    self.repos = repos
+                    self.state = .loaded
+                }
             }
             .store(in: &cancellables)
     }
 }
 
-enum State {
+enum ReposViewState {
     case idle
     case loading
     case loaded

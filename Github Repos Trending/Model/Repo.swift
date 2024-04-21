@@ -16,4 +16,10 @@ struct Repo: Decodable, Identifiable {
     var avatarURL: URL {
         owner.imageURL
     }
+    
+    static func mockRepo() -> Repo {
+        Repo(id: 123, name: "awesome-ios", 
+             full_name: "vzousa/awesome-ios",
+             owner: Owner(avatar_url: "https://avatars.githubusercontent.com/u/4314092?v=4"))
+    }
 }

@@ -32,6 +32,7 @@
 		70F607E62BD54379003E1E68 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E52BD54379003E1E68 /* Spinner.swift */; };
 		70F607E82BD58EFD003E1E68 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E72BD58EFD003E1E68 /* ReposService.swift */; };
 		70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E92BD58F30003E1E68 /* NetworkManager.swift */; };
+		70F607ED2BD59C28003E1E68 /* EasySkeleton in Frameworks */ = {isa = PBXBuildFile; productRef = 70F607EC2BD59C28003E1E68 /* EasySkeleton */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F607ED2BD59C28003E1E68 /* EasySkeleton in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +209,9 @@
 			dependencies = (
 			);
 			name = "Github Repos Trending";
+			packageProductDependencies = (
+				70F607EC2BD59C28003E1E68 /* EasySkeleton */,
+			);
 			productName = "Github Repos Trending";
 			productReference = 70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 70F607932BD5310C003E1E68;
+			packageReferences = (
+				70F607EB2BD59C28003E1E68 /* XCRemoteSwiftPackageReference "EasySkeleton" */,
+			);
 			productRefGroup = 70F6079D2BD5310C003E1E68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -670,6 +678,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70F607EB2BD59C28003E1E68 /* XCRemoteSwiftPackageReference "EasySkeleton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SpectralDragon/EasySkeleton";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70F607EC2BD59C28003E1E68 /* EasySkeleton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70F607EB2BD59C28003E1E68 /* XCRemoteSwiftPackageReference "EasySkeleton" */;
+			productName = EasySkeleton;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70F607942BD5310C003E1E68 /* Project object */;
 }

@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import EasySkeleton
 
 struct ReposView: View {
     @ObservedObject var reposViewModel: ReposViewModel
+    @State private var isLoading = true
     
     var body: some View {
         NavigationStack {
-            content
+            createContentView()
                 .navigationTitle("Trending")
                 .navigationBarTitleDisplayMode(.inline)
                 .onAppear {
@@ -21,21 +23,37 @@ struct ReposView: View {
         }
     }
     
-    private var content: some View {
+    private func createContentView() -> some View {
         switch reposViewModel.state {
-        case .idle:
-            Color.clear.eraseToAnyView()
-        case .loading:
-            Spinner(isAnimating: true, style: .large).eraseToAnyView()
+        case .idle, .loading:
+            setLoading(true)
+            return reposListView.eraseToAnyView()
         case .loaded:
-            List {
-                ForEach(reposViewModel.repos) { repo in
-                    RepoRowView(repo: repo)
-                }
-            }.eraseToAnyView()
+            setLoading(false)
+            return reposListView.eraseToAnyView()
         case .failed:
             // TODO: Add Lottie retry view
-            Text("Error fetching trending repos").eraseToAnyView()
+            isLoading = false
+            return Text("Error fetching trending repos").eraseToAnyView()
+        }
+    }
+    
+    private var reposListView: some View {
+        return List {
+            ForEach(reposViewModel.repos) { repo in
+                RepoRowView(repo: repo, isLoading: $isLoading)
+            }.skeletonForEach(itemsCount: 5) { _ in
+                RepoRowView(repo: Repo.mockRepo(), isLoading: $isLoading)
+                    .skeletonable()
+            }
+            .setSkeleton($isLoading)
+        }
+        .eraseToAnyView()
+    }
+    
+    private func setLoading(_ isLoading: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.isLoading = isLoading
         }
     }
 }

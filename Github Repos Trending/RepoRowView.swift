@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import EasySkeleton
 
 struct RepoRowView: View {
     let repo: Repo
+    @Binding var isLoading: Bool
     
     var body: some View {
         HStack(spacing: 20) {
@@ -19,17 +21,19 @@ struct RepoRowView: View {
             }
             .frame(width: 60, height: 60)
             .clipShape(Circle())
+            .skeletonable()
             VStack(alignment: .leading, spacing: 20) {
                 Text(repo.name)
                     .font(.headline)
+                    .skeletonable()
                 Text(repo.full_name)
                     .font(.title2)
+                    .skeletonable()
             }
-        }
+        }.setSkeleton($isLoading)
     }
 }
 
 #Preview {
-    RepoRowView(repo: Repo(id: 123, name: "awesome-ios", full_name: "vzousa/awesome-ios",
-                           owner: Owner(avatar_url: "https://avatars.githubusercontent.com/u/4314092?v=4")))
+    RepoRowView(repo: Repo.mockRepo(), isLoading: .constant(false))
 }
