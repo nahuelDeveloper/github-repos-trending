@@ -10,7 +10,7 @@ import Combine
 
 class ReposViewModel: ObservableObject {
     let reposService: ReposServicing
-    @Published var state = State.idle
+    @Published var state = ReposViewState.idle
     @Published private(set) var repos = [Repo]()
     var cancellables = [AnyCancellable]()
     
@@ -33,7 +33,7 @@ class ReposViewModel: ObservableObject {
     }
 }
 
-enum State {
+enum ReposViewState {
     case idle
     case loading
     case failed

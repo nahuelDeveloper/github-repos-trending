@@ -10,6 +10,7 @@ import SkeletonUI
 
 struct ReposView: View {
     @ObservedObject var reposViewModel: ReposViewModel
+    @State var expandedRepo: Repo?
     
     var body: some View {
         NavigationStack {
@@ -28,7 +29,12 @@ struct ReposView: View {
             Color.clear.eraseToAnyView()
         case .loading:
             SkeletonList(with: reposViewModel.repos, quantity: 5) { loading, repo in
-                RepoRowView(repo: repo)
+                RepoRowView(repo: repo, isExpanded: isRepoExpanded(repo))
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        print("TAPPED REPO: \(repo?.name)")
+                        expandedRepo = repo
+                    }
                     .skeleton(with: loading,
                               animation: .pulse(),
                               appearance: .solid(color: Color.grayDark,
@@ -41,6 +47,12 @@ struct ReposView: View {
         case .failed:
             retryView.eraseToAnyView()
         }
+    }
+    
+    private func isRepoExpanded(_ repo: Repo?) -> Bool {
+        guard let repo = repo, let expandedRepo = expandedRepo else { return false }
+        
+        return repo.id == expandedRepo.id
     }
     
     private var retryView: some View {
