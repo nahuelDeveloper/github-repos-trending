@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct RepoRowView: View {
-    let repo: Repo
+    var repo: Repo?
     
     var body: some View {
         HStack(spacing: 20) {
-            AsyncImage(url: repo.avatarURL) { image in
+            AsyncImage(url: repo?.avatarURL) { image in
                 image.resizable()
             } placeholder: {
                 Spinner(isAnimating: true, style: .medium)
@@ -20,9 +20,9 @@ struct RepoRowView: View {
             .frame(width: 60, height: 60)
             .clipShape(Circle())
             VStack(alignment: .leading, spacing: 20) {
-                Text(repo.name)
+                Text(repo?.name)
                     .font(.headline)
-                Text(repo.full_name)
+                Text(repo?.full_name)
                     .font(.title2)
             }
         }

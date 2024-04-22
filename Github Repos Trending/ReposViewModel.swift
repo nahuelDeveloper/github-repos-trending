@@ -28,7 +28,6 @@ class ReposViewModel: ObservableObject {
                 }
             } receiveValue: { repos in
                 self.repos = repos
-                self.state = .loaded
             }
             .store(in: &cancellables)
     }
@@ -37,6 +36,5 @@ class ReposViewModel: ObservableObject {
 enum State {
     case idle
     case loading
-    case loaded
     case failed
 }

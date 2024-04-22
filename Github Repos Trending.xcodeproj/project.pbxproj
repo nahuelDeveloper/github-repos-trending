@@ -32,6 +32,7 @@
 		70F607E62BD54379003E1E68 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E52BD54379003E1E68 /* Spinner.swift */; };
 		70F607E82BD58EFD003E1E68 /* ReposService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E72BD58EFD003E1E68 /* ReposService.swift */; };
 		70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607E92BD58F30003E1E68 /* NetworkManager.swift */; };
+		70F607F02BD5A918003E1E68 /* SkeletonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 70F607EF2BD5A918003E1E68 /* SkeletonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F607F02BD5A918003E1E68 /* SkeletonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +209,9 @@
 			dependencies = (
 			);
 			name = "Github Repos Trending";
+			packageProductDependencies = (
+				70F607EF2BD5A918003E1E68 /* SkeletonUI */,
+			);
 			productName = "Github Repos Trending";
 			productReference = 70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */;
 			productType = "com.apple.product-type.application";
@@ -279,6 +284,9 @@
 				Base,
 			);
 			mainGroup = 70F607932BD5310C003E1E68;
+			packageReferences = (
+				70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+			);
 			productRefGroup = 70F6079D2BD5310C003E1E68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -670,6 +678,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		70F607EF2BD5A918003E1E68 /* SkeletonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
+			productName = SkeletonUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 70F607942BD5310C003E1E68 /* Project object */;
 }

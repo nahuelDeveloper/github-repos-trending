@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SkeletonUI
 
 struct ReposView: View {
     @ObservedObject var reposViewModel: ReposViewModel
@@ -26,13 +27,17 @@ struct ReposView: View {
         case .idle:
             Color.clear.eraseToAnyView()
         case .loading:
-            Spinner(isAnimating: true, style: .large).eraseToAnyView()
-        case .loaded:
-            List {
-                ForEach(reposViewModel.repos) { repo in
-                    RepoRowView(repo: repo)
-                }
-            }.eraseToAnyView()
+            SkeletonList(with: reposViewModel.repos, quantity: 5) { loading, repo in
+                RepoRowView(repo: repo)
+                    .skeleton(with: loading,
+                              animation: .pulse(),
+                              appearance: .solid(color: Color.grayDark,
+                                                 background: Color.grayLight),
+                              shape: .capsule,
+                              lines: 2,
+                              scales: [1: 0.5])
+            }
+            .eraseToAnyView()
         case .failed:
             // TODO: Add Lottie retry view
             Text("Error fetching trending repos").eraseToAnyView()
