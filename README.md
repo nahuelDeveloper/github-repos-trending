@@ -9,6 +9,8 @@ For the app architecture, i chose MVVM. I thinks this architecture works great f
 
 For networking i chose to implement a Service layer, and encapsulate networking logic in another class called NetworkManager. In my experience this approach works good with MVVM, because we can use Dependency Injection to pass the Service to the ViewModel. I also created a Servicing Protocol that allowed me to have both a MockService with local mock data and an actual Service that fetches data from the API. This allows the ViewModel to be testable, and also to use the app with mock data, which is quite useful while developing or debugging.
 
+I used SPM for third party libraries. It was the first time that i use it, all my work life i have used Cocoapods, and i think it's great. No need for a Podfile, a .xcworkspace, everything is handled via Xcode. I only had an issue while debugging the issue with CoreData, y removed the DerivedData for the project and the libraries disappeared as well. I had to reset package caches to fix it.
+
 ## Retro
 
 I didn't have as much time as i would have liked to develop the app, but i think it was enough to have a working app to present and discuss about.
