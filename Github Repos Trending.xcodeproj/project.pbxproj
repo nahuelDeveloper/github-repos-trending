@@ -10,6 +10,8 @@
 		70361E8D2BD5EE4100A11B1B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 70361E8C2BD5EE4100A11B1B /* Lottie */; };
 		70361E8F2BD5EF9E00A11B1B /* lottie-retry-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */; };
 		70361E912BD5EFD300A11B1B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70361E902BD5EFD300A11B1B /* LottieView.swift */; };
+		70DAD9832BD703ED00AB2219 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD9822BD703ED00AB2219 /* StorageManager.swift */; };
+		70DAD9852BD7067600AB2219 /* RepoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD9842BD7067600AB2219 /* RepoEntity.swift */; };
 		70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */; };
 		70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607A12BD5310C003E1E68 /* ReposView.swift */; };
 		70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F607A32BD5310D003E1E68 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-retry-animation.json"; sourceTree = "<group>"; };
 		70361E902BD5EFD300A11B1B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		70DAD9822BD703ED00AB2219 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		70DAD9842BD7067600AB2219 /* RepoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoEntity.swift; sourceTree = "<group>"; };
 		70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Repos Trending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingApp.swift; sourceTree = "<group>"; };
 		70F607A12BD5310C003E1E68 /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
@@ -207,6 +211,7 @@
 			children = (
 				70361E952BD6DA6400A11B1B /* Lottie */,
 				70F607E92BD58F30003E1E68 /* NetworkManager.swift */,
+				70DAD9822BD703ED00AB2219 /* StorageManager.swift */,
 				70F607D92BD534EF003E1E68 /* Extensions.swift */,
 				70F607E52BD54379003E1E68 /* Spinner.swift */,
 				70361E942BD6DA5400A11B1B /* Mocks */,
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				70F607CF2BD533BE003E1E68 /* Repo.swift */,
+				70DAD9842BD7067600AB2219 /* RepoEntity.swift */,
 				70F607DC2BD53745003E1E68 /* Owner.swift */,
 			);
 			path = Model;
@@ -375,8 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */,
+				70DAD9852BD7067600AB2219 /* RepoEntity.swift in Sources */,
 				70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */,
 				70F607DD2BD53745003E1E68 /* Owner.swift in Sources */,
+				70DAD9832BD703ED00AB2219 /* StorageManager.swift in Sources */,
 				70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */,
 				70F607D02BD533BE003E1E68 /* Repo.swift in Sources */,
 				70F607D72BD534D0003E1E68 /* MockReposService.swift in Sources */,
