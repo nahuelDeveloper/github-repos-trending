@@ -10,7 +10,7 @@ import Combine
 
 class ReposViewModel: ObservableObject {
     let reposService: ReposServicing
-    @Published private(set) var state = State.idle
+    @Published var state = State.idle
     @Published private(set) var repos = [Repo]()
     var cancellables = [AnyCancellable]()
     

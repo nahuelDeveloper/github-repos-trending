@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70361E8D2BD5EE4100A11B1B /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 70361E8C2BD5EE4100A11B1B /* Lottie */; };
+		70361E8F2BD5EF9E00A11B1B /* lottie-retry-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */; };
+		70361E912BD5EFD300A11B1B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70361E902BD5EFD300A11B1B /* LottieView.swift */; };
 		70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */; };
 		70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607A12BD5310C003E1E68 /* ReposView.swift */; };
 		70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F607A32BD5310D003E1E68 /* Assets.xcassets */; };
@@ -53,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-retry-animation.json"; sourceTree = "<group>"; };
+		70361E902BD5EFD300A11B1B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Repos Trending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingApp.swift; sourceTree = "<group>"; };
 		70F607A12BD5310C003E1E68 /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F607F02BD5A918003E1E68 /* SkeletonUI in Frameworks */,
+				70361E8D2BD5EE4100A11B1B /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70361E922BD6DA1700A11B1B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				70F607A12BD5310C003E1E68 /* ReposView.swift */,
+				70F607E32BD53FEB003E1E68 /* RepoRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		70361E932BD6DA2C00A11B1B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				70F607C92BD532AB003E1E68 /* ReposViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		70361E942BD6DA5400A11B1B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				70F607D32BD5344B003E1E68 /* mock-items.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		70361E952BD6DA6400A11B1B /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */,
+				70361E902BD5EFD300A11B1B /* LottieView.swift */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		70F607932BD5310C003E1E68 = {
 			isa = PBXGroup;
 			children = (
@@ -126,11 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */,
-				70F607A12BD5310C003E1E68 /* ReposView.swift */,
-				70F607E32BD53FEB003E1E68 /* RepoRowView.swift */,
-				70F607C92BD532AB003E1E68 /* ReposViewModel.swift */,
-				70F607E02BD537C1003E1E68 /* Service */,
 				70F607DF2BD5374D003E1E68 /* Model */,
+				70361E922BD6DA1700A11B1B /* View */,
+				70361E932BD6DA2C00A11B1B /* ViewModel */,
+				70F607E02BD537C1003E1E68 /* Service */,
 				70F607D22BD53415003E1E68 /* Utils */,
 				70F607A32BD5310D003E1E68 /* Assets.xcassets */,
 				70F607A52BD5310D003E1E68 /* Preview Content */,
@@ -166,10 +205,11 @@
 		70F607D22BD53415003E1E68 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				70F607D32BD5344B003E1E68 /* mock-items.json */,
+				70361E952BD6DA6400A11B1B /* Lottie */,
+				70F607E92BD58F30003E1E68 /* NetworkManager.swift */,
 				70F607D92BD534EF003E1E68 /* Extensions.swift */,
 				70F607E52BD54379003E1E68 /* Spinner.swift */,
-				70F607E92BD58F30003E1E68 /* NetworkManager.swift */,
+				70361E942BD6DA5400A11B1B /* Mocks */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -211,6 +251,7 @@
 			name = "Github Repos Trending";
 			packageProductDependencies = (
 				70F607EF2BD5A918003E1E68 /* SkeletonUI */,
+				70361E8C2BD5EE4100A11B1B /* Lottie */,
 			);
 			productName = "Github Repos Trending";
 			productReference = 70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */;
@@ -286,6 +327,7 @@
 			mainGroup = 70F607932BD5310C003E1E68;
 			packageReferences = (
 				70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */,
+				70361E8B2BD5EE4100A11B1B /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 70F6079D2BD5310C003E1E68 /* Products */;
 			projectDirPath = "";
@@ -303,6 +345,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70361E8F2BD5EF9E00A11B1B /* lottie-retry-animation.json in Resources */,
 				70F607A72BD5310D003E1E68 /* Preview Assets.xcassets in Resources */,
 				70F607D42BD5344B003E1E68 /* mock-items.json in Resources */,
 				70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */,
@@ -339,6 +382,7 @@
 				70F607D72BD534D0003E1E68 /* MockReposService.swift in Sources */,
 				70F607E42BD53FEB003E1E68 /* RepoRowView.swift in Sources */,
 				70F607E82BD58EFD003E1E68 /* ReposService.swift in Sources */,
+				70361E912BD5EFD300A11B1B /* LottieView.swift in Sources */,
 				70F607CD2BD53372003E1E68 /* ReposServicing.swift in Sources */,
 				70F607CA2BD532AB003E1E68 /* ReposViewModel.swift in Sources */,
 				70F607DA2BD534EF003E1E68 /* Extensions.swift in Sources */,
@@ -680,6 +724,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		70361E8B2BD5EE4100A11B1B /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/CSolanaM/SkeletonUI.git";
@@ -691,6 +743,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		70361E8C2BD5EE4100A11B1B /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 70361E8B2BD5EE4100A11B1B /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		70F607EF2BD5A918003E1E68 /* SkeletonUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 70F607EE2BD5A918003E1E68 /* XCRemoteSwiftPackageReference "SkeletonUI" */;
