@@ -11,7 +11,9 @@
 		70361E8F2BD5EF9E00A11B1B /* lottie-retry-animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */; };
 		70361E912BD5EFD300A11B1B /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70361E902BD5EFD300A11B1B /* LottieView.swift */; };
 		70DAD9832BD703ED00AB2219 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD9822BD703ED00AB2219 /* StorageManager.swift */; };
-		70DAD9852BD7067600AB2219 /* RepoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD9842BD7067600AB2219 /* RepoEntity.swift */; };
+		70DAD98A2BD71B6000AB2219 /* RepoDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD9882BD71B6000AB2219 /* RepoDataModel.xcdatamodeld */; };
+		70DAD98D2BD71C6400AB2219 /* RepoEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD98B2BD71C6400AB2219 /* RepoEntity+CoreDataClass.swift */; };
+		70DAD98E2BD71C6400AB2219 /* RepoEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD98C2BD71C6400AB2219 /* RepoEntity+CoreDataProperties.swift */; };
 		70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */; };
 		70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F607A12BD5310C003E1E68 /* ReposView.swift */; };
 		70F607A42BD5310D003E1E68 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F607A32BD5310D003E1E68 /* Assets.xcassets */; };
@@ -61,7 +63,9 @@
 		70361E8E2BD5EF9E00A11B1B /* lottie-retry-animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "lottie-retry-animation.json"; sourceTree = "<group>"; };
 		70361E902BD5EFD300A11B1B /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		70DAD9822BD703ED00AB2219 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
-		70DAD9842BD7067600AB2219 /* RepoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoEntity.swift; sourceTree = "<group>"; };
+		70DAD9892BD71B6000AB2219 /* RepoDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepoDataModel.xcdatamodel; sourceTree = "<group>"; };
+		70DAD98B2BD71C6400AB2219 /* RepoEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		70DAD98C2BD71C6400AB2219 /* RepoEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepoEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		70F6079C2BD5310C003E1E68 /* Github Repos Trending.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github Repos Trending.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F6079F2BD5310C003E1E68 /* Github_Repos_TrendingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Github_Repos_TrendingApp.swift; sourceTree = "<group>"; };
 		70F607A12BD5310C003E1E68 /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
@@ -149,6 +153,9 @@
 		70F607932BD5310C003E1E68 = {
 			isa = PBXGroup;
 			children = (
+				70DAD98B2BD71C6400AB2219 /* RepoEntity+CoreDataClass.swift */,
+				70DAD98C2BD71C6400AB2219 /* RepoEntity+CoreDataProperties.swift */,
+				70DAD9882BD71B6000AB2219 /* RepoDataModel.xcdatamodeld */,
 				70F6079E2BD5310C003E1E68 /* Github Repos Trending */,
 				70F607AF2BD5310D003E1E68 /* Github Repos TrendingTests */,
 				70F607B92BD5310D003E1E68 /* Github Repos TrendingUITests */,
@@ -223,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				70F607CF2BD533BE003E1E68 /* Repo.swift */,
-				70DAD9842BD7067600AB2219 /* RepoEntity.swift */,
 				70F607DC2BD53745003E1E68 /* Owner.swift */,
 			);
 			path = Model;
@@ -380,9 +386,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DAD98D2BD71C6400AB2219 /* RepoEntity+CoreDataClass.swift in Sources */,
 				70F607EA2BD58F30003E1E68 /* NetworkManager.swift in Sources */,
-				70DAD9852BD7067600AB2219 /* RepoEntity.swift in Sources */,
 				70F607A22BD5310C003E1E68 /* ReposView.swift in Sources */,
+				70DAD98E2BD71C6400AB2219 /* RepoEntity+CoreDataProperties.swift in Sources */,
+				70DAD98A2BD71B6000AB2219 /* RepoDataModel.xcdatamodeld in Sources */,
 				70F607DD2BD53745003E1E68 /* Owner.swift in Sources */,
 				70DAD9832BD703ED00AB2219 /* StorageManager.swift in Sources */,
 				70F607A02BD5310C003E1E68 /* Github_Repos_TrendingApp.swift in Sources */,
@@ -762,6 +770,19 @@
 			productName = SkeletonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		70DAD9882BD71B6000AB2219 /* RepoDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				70DAD9892BD71B6000AB2219 /* RepoDataModel.xcdatamodel */,
+			);
+			currentVersion = 70DAD9892BD71B6000AB2219 /* RepoDataModel.xcdatamodel */;
+			path = RepoDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 70F607942BD5310C003E1E68 /* Project object */;
 }
