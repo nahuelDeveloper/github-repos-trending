@@ -32,7 +32,6 @@ struct ReposView: View {
                 RepoRowView(repo: repo, isExpanded: isRepoExpanded(repo))
                     .contentShape(Rectangle())
                     .onTapGesture {
-                        print("TAPPED REPO: \(repo?.name)")
                         expandedRepo = repo
                     }
                     .skeleton(with: loading,

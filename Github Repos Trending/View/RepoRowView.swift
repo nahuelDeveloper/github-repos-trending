@@ -37,12 +37,30 @@ struct RepoRowView: View {
     }
     
     private var expandedView: some View {
-        Text("This is the description of the repo. Here we will show a text with the description of the repo.")
+        VStack(alignment: .leading, spacing: 20) {
+            Text(repo?.description)
+            HStack(spacing: 60) {
+                HStack {
+                    Image(systemName: "dot.square.fill")
+                        .foregroundStyle(.blue)
+                    Text(repo?.language)
+                }
+                HStack {
+                    if let starsCount = repo?.stargazers_count {
+                        Image(systemName: "star.fill")
+                            .foregroundStyle(.yellow)
+                        Text("\(starsCount)")
+                    }
+                }
+            }
+            .font(.caption)
+        }
     }
 }
 
 #Preview {
     RepoRowView(repo: Repo(id: 123, name: "awesome-ios", full_name: "vzousa/awesome-ios",
-                           owner: Owner(avatar_url: "https://avatars.githubusercontent.com/u/4314092?v=4")), 
-                isExpanded: false)
+                           owner: Owner(avatar_url: "https://avatars.githubusercontent.com/u/4314092?v=4"),
+                          description: "A repo for iOS", language: "Swift", stargazers_count: 5630),
+                isExpanded: true)
 }
