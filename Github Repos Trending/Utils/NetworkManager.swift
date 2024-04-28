@@ -31,6 +31,6 @@ class NetworkManager {
     }
 }
 
-private struct APIResponse<T: Decodable>: Decodable {
+struct APIResponse<T: Decodable>: Decodable {
     let items: T
 }

@@ -17,8 +17,11 @@ struct ReposView: View {
             content
                 .navigationTitle("Trending")
                 .navigationBarTitleDisplayMode(.inline)
-                .onAppear {
-                    reposViewModel.loadRepos()
+//                .onAppear {
+//                    reposViewModel.loadRepos()
+//                }
+                .task {
+                    await reposViewModel.loadRepos2()
                 }
         }
     }
